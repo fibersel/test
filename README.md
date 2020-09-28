@@ -26,3 +26,7 @@ Run counter in docker image:
 ```
 cat data/data.txt | docker run -i counter
 ```
+
+# TODO
+stylecheck
+RPM
