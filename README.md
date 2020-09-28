@@ -15,3 +15,14 @@ or
 ```
 ./Counter/Counter <filename>
 ```
+# Docker usage
+build docker image:
+
+```
+docker build -t counter .
+```
+Run counter in docker image:
+
+```
+cat data/data.txt | docker run -i counter
+```
