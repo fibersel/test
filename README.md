@@ -28,5 +28,5 @@ cat data/data.txt | docker run -i counter
 ```
 
 # TODO
-stylecheck
+stylecheck<br>
 RPM
