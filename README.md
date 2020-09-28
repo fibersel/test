@@ -9,5 +9,9 @@ make Counter
 # Usage
 
 ```
-cat <filename> | ./Counter
+cat <filename> | ./Counter/Counter
+```
+or
+```
+./Counter/Counter <filename>
 ```
