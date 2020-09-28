@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <iostream>
 #include <algorithm>
-
+#include <fstream>
 
 struct Token {
     std::string payload;
@@ -32,7 +32,17 @@ std::unordered_map<std::string, int> getWordCounts(std::istream& stream) {
 
 
 int main(int ac, char** av) {
-    std::unordered_map<std::string, int> counts = getWordCounts(std::cin);   
+    std::unordered_map<std::string, int> counts;
+    if (ac == 2) {
+        std::ifstream input(av[1]);
+        if (input.fail()) {
+            std::cout << "such file does not exist, terminating" << std::endl;
+            return -1;
+        }
+        counts = getWordCounts(input);
+    } else {
+        counts = getWordCounts(std::cin);
+    }
 
     std::vector<Token> res(counts.size());
     int ptr = 0;
